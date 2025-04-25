@@ -1,0 +1,147 @@
+@startuml
+!theme plain
+top to bottom direction
+skinparam linetype ortho
+
+class gombasz.Gombafonal {
+  + gombasz.Gombafonal(tekton.Hatszog):
+  - hatralevoIdo: int
+  - ep: boolean
+  - gombatestek: List<gombasz.Gombatest>
+  + gombatestNovesztes(): void
+  + elhal(): void
+  + getTipus(): gamelogic.TargyTipus
+}
+class gombasz.Gombasz {
+  + gombasz.Gombasz(String):
+  - gombatestek: List<gombasz.Gombatest>
+  + lep(): void
+}
+class gombasz.Gombatest {
+  + gombasz.Gombatest(tekton.Hatszog):
+  - sporaszam: int
+  - elpusztult: boolean
+  - szint: int
+  - gombafonal: gombasz.Gombafonal
+  + sporaToltes(): void
+  + gombafonalNovesztes(): void
+  + getTipus(): gamelogic.TargyTipus
+  + sporaLoves(): void
+}
+class tekton.Hatszog {
+  + tekton.Hatszog():
+  - gombatest: gombasz.Gombatest
+  - tekton: tekton.Tekton
+  - targyak: List<gamelogic.Targy>
+  - szomszedok: List<tekton.Hatszog>
+  + vanGombatest(): boolean
+  + vanSpora(): boolean
+  + getSzomszedok(): List<tekton.Hatszog>
+}
+interface interfacek.ILerakhato << interface >>
+interface interfacek.IMozgathato << interface >>
+class gamelogic.Jatekos <<abstract>> {
+  + gamelogic.Jatekos(String):
+  - nev: String
+  - pontszam: int
+  + lep(): void
+}
+class gamelogic.Jatekter {
+  + gamelogic.Jatekter():
+  - tektonok: List<tekton.Tekton>
+}
+class gamelogic.Kor {
+  + gamelogic.Kor():
+}
+class rovarasz.Rovar {
+  + rovarasz.Rovar(tekton.Hatszog):
+  - tudVagni: boolean
+  - sebesseg: rovarasz.RovarSebesseg
+  + vagas(): void
+  + eves(): void
+  + getTipus(): gamelogic.TargyTipus
+}
+enum rovarasz.RovarSebesseg << enumeration >> {
+  - rovarasz.RovarSebesseg(int):
+  - value: int
+  + NORMAL:
+  + LASSU:
+  + ROKKANT:
+  + GYROS:
+  + getValue(): int
+  + values(): rovarasz.RovarSebesseg[]
+  + valueOf(String): rovarasz.RovarSebesseg
+}
+class rovarasz.Rovarasz {
+  + rovarasz.Rovarasz(String):
+  - rovar: rovarasz.Rovar
+  + lep(): void
+}
+class gombasz.Spora {
+  + gombasz.Spora(tekton.Hatszog, gombasz.Sporaeffekt, int):
+  - tapanyagTartalom: int
+  - hatralevoGyorsitas: int
+  - effekt: gombasz.Sporaeffekt
+  + getTipus(): gamelogic.TargyTipus
+  + fonalGyorsitas(): void
+}
+enum gombasz.Sporaeffekt << enumeration >> {
+  + gombasz.Sporaeffekt():
+  + NEM_TUD_VAGNI:
+  + LASSIT:
+  + GYORSIT:
+  + BENIT:
+  + valueOf(String): gombasz.Sporaeffekt
+  + values(): gombasz.Sporaeffekt[]
+}
+class gamelogic.Targy <<abstract>> {
+  # gamelogic.Targy(tekton.Hatszog):
+  - hatszog: tekton.Hatszog
+  + getTipus(): gamelogic.TargyTipus
+}
+enum gamelogic.TargyTipus << enumeration >> {
+  + gamelogic.TargyTipus():
+  + GOMBATEST:
+  + GOMBAFONAL:
+  + ROVAR:
+  + SPORA:
+  + valueOf(String): gamelogic.TargyTipus
+  + values(): gamelogic.TargyTipus[]
+}
+class tekton.Tekton {
+  + tekton.Tekton():
+  - szomszedok: List<tekton.Tekton>
+  - hatszogek: List<tekton.Hatszog>
+  + sporaszam(): int
+  + kettetores(): void
+  + lehetGomba(): boolean
+}
+class tekton.TektonEgyFonalas {
+  + tekton.TektonEgyFonalas():
+}
+class tekton.TektonFelszivodoFonalas {
+  + tekton.TektonFelszivodoFonalas():
+}
+class tekton.TektonGombatlan {
+  + tekton.TektonGombatlan():
+  + lehetGomba(): boolean
+}
+class tekton.TektonKeresztfonalas {
+  + tekton.TektonKeresztfonalas():
+}
+
+gombasz.Gombafonal               -[#008200,dashed]-^  interfacek.ILerakhato
+gombasz.Gombafonal               -[#000082,plain]-^  gamelogic.Targy
+gombasz.Gombasz                  -[#000082,plain]-^  gamelogic.Jatekos
+gombasz.Gombatest                -[#008200,dashed]-^  interfacek.ILerakhato
+gombasz.Gombatest                -[#000082,plain]-^  gamelogic.Targy
+rovarasz.Rovar                    -[#008200,dashed]-^  interfacek.IMozgathato
+rovarasz.Rovar                    -[#000082,plain]-^  gamelogic.Targy
+rovarasz.Rovarasz                 -[#000082,plain]-^  gamelogic.Jatekos
+gombasz.Spora                    -[#008200,dashed]-^  interfacek.ILerakhato
+gombasz.Spora                    -[#000082,plain]-^  gamelogic.Targy
+tekton.TektonEgyFonalas         -[#000082,plain]-^  tekton.Tekton
+tekton.TektonFelszivodoFonalas  -[#000082,plain]-^  tekton.Tekton
+tekton.TektonGombatlan          -[#000082,plain]-^  tekton.Tekton
+tekton.TektonKeresztfonalas     -[#000082,plain]-^  tekton.Tekton
+@enduml

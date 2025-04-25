@@ -1,0 +1,105 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.0.16 Chrome/132.0.6834.196 Electron/34.2.0 Safari/537.36" version="26.0.16">
+  <diagram name="Page-1" id="a2J6dcBuSjYwALpYrpZE">
+    <mxGraphModel dx="989" dy="577" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="UAMXV8g679iFeMratkXR-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;curved=0;endArrow=block;endFill=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="149.80034482758606" y="249.99551724137928" as="sourcePoint" />
+            <mxPoint x="285" y="251" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="149.99" y="251" />
+              <mxPoint x="284.99" y="251" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UAMXV8g679iFeMratkXR-6" value="checkSpora()" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="UAMXV8g679iFeMratkXR-5">
+          <mxGeometry x="0.2809" y="-2" relative="1" as="geometry">
+            <mxPoint x="-12" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UAMXV8g679iFeMratkXR-1" value=":gombasz.Gombasz" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="100" y="180" width="100" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="UAMXV8g679iFeMratkXR-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;curved=0;endArrow=open;endFill=0;dashed=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="434.9985714285713" y="329.71" as="sourcePoint" />
+            <mxPoint x="570" y="330" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="515.0699999999999" y="329.71" />
+              <mxPoint x="515.0699999999999" y="329.71" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UAMXV8g679iFeMratkXR-13" value="&amp;lt;&amp;lt;create&amp;gt;&amp;gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="UAMXV8g679iFeMratkXR-7">
+          <mxGeometry x="0.1448" relative="1" as="geometry">
+            <mxPoint x="-15" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UAMXV8g679iFeMratkXR-2" value=":gombasz.Gombafonal" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="240" y="180" width="100" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="UAMXV8g679iFeMratkXR-3" value=":tekton.Tekton" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="380" y="180" width="100" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="UAMXV8g679iFeMratkXR-4" value=":gombasz.Gombatest" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};size=20;" vertex="1" parent="1">
+          <mxGeometry x="570" y="320" width="70" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="UAMXV8g679iFeMratkXR-9" value="" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="425" y="320" width="10" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="UAMXV8g679iFeMratkXR-11" value="[van elég spóra]" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="33" y="310" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="UAMXV8g679iFeMratkXR-14" value="gombatestNovesztes()" style="html=1;verticalAlign=bottom;startArrow=oval;startFill=1;endArrow=block;startSize=8;curved=0;rounded=0;labelBackgroundColor=none;fontSize=9;entryX=0;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="UAMXV8g679iFeMratkXR-16">
+          <mxGeometry width="60" relative="1" as="geometry">
+            <mxPoint x="40" y="240" as="sourcePoint" />
+            <mxPoint x="120" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UAMXV8g679iFeMratkXR-16" value="&lt;span style=&quot;color: rgba(0, 0, 0, 0); font-family: monospace; font-size: 0px; text-align: start; text-wrap-mode: nowrap;&quot;&gt;%3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20value%3D%22%22%20style%3D%22whiteSpace%3Dwrap%3Bhtml%3D1%3B%22%20vertex%3D%221%22%20parent%3D%221%22%3E%3CmxGeometry%20x%3D%22425%22%20y%3D%22320%22%20width%3D%2210%22%20height%3D%2260%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphModel%3E&lt;/span&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="145" y="240" width="10" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="UAMXV8g679iFeMratkXR-15" value="&lt;span style=&quot;color: rgba(0, 0, 0, 0); font-family: monospace; font-size: 0px; text-align: start; text-wrap-mode: nowrap;&quot;&gt;%3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20value%3D%22%22%20style%3D%22whiteSpace%3Dwrap%3Bhtml%3D1%3B%22%20vertex%3D%221%22%20parent%3D%221%22%3E%3CmxGeometry%20x%3D%22425%22%20y%3D%22320%22%20width%3D%2210%22%20height%3D%2260%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphModel%3E&lt;/span&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="285" y="250" width="10" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="UAMXV8g679iFeMratkXR-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;curved=0;endArrow=open;endFill=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="UAMXV8g679iFeMratkXR-9">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="185" y="319.6" as="sourcePoint" />
+            <mxPoint x="430" y="319.6000000000001" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="155" y="320" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UAMXV8g679iFeMratkXR-12" value="letrehozGombatest()" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="UAMXV8g679iFeMratkXR-8">
+          <mxGeometry x="-0.3178" relative="1" as="geometry">
+            <mxPoint x="-14" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UAMXV8g679iFeMratkXR-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;endArrow=open;endFill=0;entryX=0.945;entryY=0.553;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="285.55" y="279.9962068965517" as="sourcePoint" />
+            <mxPoint x="155.00000000000006" y="280.01" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="155.55" y="279.40999999999997" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UAMXV8g679iFeMratkXR-10" value="alt" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;width=30;height=20;" vertex="1" parent="1">
+          <mxGeometry x="40" y="290" width="640" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="UAMXV8g679iFeMratkXR-18" value="A létrehozás sikertelen" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=14;verticalAlign=top;align=center;" vertex="1" parent="1">
+          <mxGeometry x="170" y="370" width="95" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="UAMXV8g679iFeMratkXR-19" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="361" width="640" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="UAMXV8g679iFeMratkXR-20" value="[nincs elég spóra]" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="35" y="370" width="120" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,142 @@
+@startuml
+!theme plain
+left to right direction
+skinparam linetype ortho
+
+class gombasz.Gombafonal {
+  + gombasz.Gombafonal(tekton.Hatszog)
+  - hatralevoIdo: int
+  - ep: boolean
+  + gombatestNovesztes(): void
+  + elhal(): void
+  + getTipus(): gamelogic.TargyTipus
+}
+
+class gombasz.Gombasz {
+  + gombasz.Gombasz(String)
+  + lep(): void
+}
+
+class gombasz.Gombatest {
+  + gombasz.Gombatest(tekton.Hatszog)
+  - sporaszam: int
+  - elpusztult: boolean
+  - szint: int
+  + sporaToltes(): void
+  + gombafonalNovesztes(): void
+  + getTipus(): gamelogic.TargyTipus
+  + sporaLoves(): void
+}
+
+class tekton.Hatszog {
+  + tekton.Hatszog()
+  + vanGombatest(): boolean
+  + vanSpora(): boolean
+  + getSzomszedok(): List<tekton.Hatszog>
+}
+
+interface interfacek.ILerakhato << interface >>
+interface interfacek.IMozgathato << interface >>
+
+class gamelogic.Jatekos <<abstract>> {
+  + gamelogic.Jatekos(String)
+  - nev: String
+  - pontszam: int
+  + lep(): void
+}
+
+class gamelogic.Jatekter {
+  + gamelogic.Jatekter()
+}
+
+class gamelogic.Kor {
+  - sorszam: int
+  + gamelogic.Kor()
+  + generalSorrend(): void
+  + lezarKor(): void
+}
+
+class rovarasz.Rovar {
+  + rovarasz.Rovar(tekton.Hatszog)
+  - tudVagni: boolean
+  - sebesseg: rovarasz.RovarSebesseg
+  + vagas(): void
+  + eves(): void
+  + getTipus(): gamelogic.TargyTipus
+}
+
+class rovarasz.Rovarasz {
+  + rovarasz.Rovarasz(String)
+  + lep(): void
+}
+
+class gombasz.Spora {
+  + gombasz.Spora(tekton.Hatszog, gombasz.Sporaeffekt, int)
+  - tapanyagTartalom: int
+  - hatralevoGyorsitas: int
+  - effekt: gombasz.Sporaeffekt
+  + getTipus(): gamelogic.TargyTipus
+  + fonalGyorsitas(): void
+}
+
+class gamelogic.Targy <<abstract>> {
+  # gamelogic.Targy(tekton.Hatszog)
+  - hatszog: tekton.Hatszog
+  + getTipus(): gamelogic.TargyTipus
+}
+
+class tekton.Tekton {
+  + tekton.Tekton()
+  + sporaszam(): int
+  + kettetores(): void
+  + lehetGomba(): boolean
+}
+
+class tekton.TektonEgyFonalas {
+  + tekton.TektonEgyFonalas()
+}
+
+class tekton.TektonFelszivodoFonalas {
+  + tekton.TektonFelszivodoFonalas()
+}
+
+class tekton.TektonGombatlan {
+  + tekton.TektonGombatlan()
+  + lehetGomba(): boolean
+}
+
+class tekton.TektonKeresztfonalas {
+  + tekton.TektonKeresztfonalas()
+}
+
+' Relationships:
+
+tekton.Hatszog "1" --> "*" gombasz.Gombatest : gombatest
+tekton.Hatszog "1" --> "*" tekton.Tekton : tekton
+tekton.Hatszog "1" --> "*" gamelogic.Targy : targyak
+tekton.Hatszog "1" --> "*" tekton.Hatszog : szomszedok
+gombasz.Gombafonal --> tekton.Hatszog
+gombasz.Gombafonal --> gombasz.Gombatest
+gombasz.Gombasz --> gombasz.Gombatest
+gombasz.Gombatest --> tekton.Hatszog
+rovarasz.Rovar --> tekton.Hatszog
+gombasz.Spora --> tekton.Hatszog
+gamelogic.Jatekter "1" --> "*" tekton.Tekton : tektonok
+gamelogic.Kor "1" --> "*" gombasz.Gombasz : gombaszSorrend
+gamelogic.Kor "1" --> "*" rovarasz.Rovarasz : rovaraszSorrend
+
+gombasz.Gombafonal -|> interfacek.ILerakhato
+gombasz.Gombafonal -|> gamelogic.Targy
+gombasz.Gombasz -|> gamelogic.Jatekos
+gombasz.Gombatest -|> interfacek.ILerakhato
+gombasz.Gombatest -|> gamelogic.Targy
+rovarasz.Rovar -|> interfacek.IMozgathato
+rovarasz.Rovar -|> gamelogic.Targy
+rovarasz.Rovarasz -|> gamelogic.Jatekos
+gombasz.Spora -|> interfacek.ILerakhato
+gombasz.Spora -|> gamelogic.Targy
+tekton.TektonEgyFonalas -|> tekton.Tekton
+tekton.TektonFelszivodoFonalas -|> tekton.Tekton
+tekton.TektonGombatlan -|> tekton.Tekton
+tekton.TektonKeresztfonalas -|> tekton.Tekton
+@enduml
